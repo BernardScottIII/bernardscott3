@@ -2,3 +2,4 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <h2>Here's my first change!</h2>
 <p>Will I ever truly learn to use git properly?</p>
+<p>Making sure environment variables are ignored</p>
