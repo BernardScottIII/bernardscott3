@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "id": "portfolio-website",
+            "title": "Portfolio Website",
+            "summary": "Personal website project which uses Sveltekit, Prism, and PostgreSQL",
+            "description": "The third iteration of my personal portfolio website which uses Svelte as the frontend, APIs developed using SvelteKit, and a backend which uses Prism and, consequentially, PostgreSQL."
+        },
+        {
+            "id": "batch-job-dispatcher",
+            "title": "Batch Job Dispatcher",
+            "summary": "A job scheduling program written in C which uses multi-threading",
+            "description": "A job scheduling program written in C which mimicks the dispatcher contained in a POSIX operating system. It has two main threads, a scheduler which accepts new jobs, removing jobs upon dispatch, and printing the job queue. A second dispatcher thread is responsible for monitoring the job queue and executing jobs at their specified time (seconds). A third thread, the executer thread, forks the dispatched job and executes it."
+        },
+        {
+            "id": "sports-analytics-and-communications-website",
+            "title": "Sports Analytics and Communications Website",
+            "summary": "A landing page for the University of Scranton Sports Analytics and Communications Club",
+            "description": "A web page designed to engage club members by providing information about club leaders, club events, club newsletters, and even hosing analytical activities for the members to complete in order to grow their analytics knowledge and skills."
+        },
+        {
+            "id": "acm-student-chapter-website",
+            "title": "ACM Student Chapter Website",
+            "summary": "University of Scranton Association of Computing Machinery Student Chapter Website",
+            "description": "A static web page hosted on University of Scranton servers which gives students information about the chapter's officers and upcomming events."
+        }
+    ]
+}

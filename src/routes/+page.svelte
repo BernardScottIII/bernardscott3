@@ -1,5 +1,6 @@
-<h1>Welcome to Bernard Scott's website using SvelteKit!</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<h2>Here's my first change!</h2>
-<p>Will I ever truly learn to use git properly?</p>
-<p>Making sure environment variables are ignored</p>
+<h1>Bernard Scott</h1>
+<h2><a href="/portfolio">Portfolio</a></h2>
+<h2><a href="/resume">Resume</a></h2>
+<h2><a href="/about-me">About Me</a></h2>
+<h2><a href="/blog">Blog</a></h2>
+<h2><a href="/contact-me">Contact Me</a></h2>
