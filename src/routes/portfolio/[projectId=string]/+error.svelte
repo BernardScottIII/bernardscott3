@@ -1,4 +1,4 @@
-<h1>Whoops!</h1>
+<h1>Whoops! Bad Project Id</h1>
 <p>I can't possibly do every project in existance!</p>
 <p>If you have a great idea I should consider creating, tell me about it!</p>
 <h4><a href="/contact-me">Contact Me</a></h4>

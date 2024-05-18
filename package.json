@@ -23,6 +23,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"json-server": "^0.17.3"
+		"json-server": "^0.17.4"
 	}
 }
