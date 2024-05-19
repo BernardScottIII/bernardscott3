@@ -4,7 +4,7 @@ import { redirect } from '@sveltejs/kit';
 export const load = async (loadEvent) => {
     const { fetch, params } = loadEvent;
     const projectId = params.projectId;
-    const response = await fetch(`http://localhost:4000/projects/${projectId}`);
+    const response = await fetch(`${baseUrl}/projects/${projectId}`);
     if(response.status == 404) {
         throw redirect(307, '/portfolio/future-project');
     }
