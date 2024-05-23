@@ -3,12 +3,12 @@ import { redirect } from '@sveltejs/kit';
 
 export const load = async (loadEvent) => {
     const { fetch } = loadEvent;
-    const response = await fetch(`http://localhost:4000/projects/dsa-mastery`);
+    const response = await fetch(`${baseUrl}/projects/dsa-mastery`);
     if(response.status == 404) {
         throw redirect(307, '/portfolio/future-project');
     }
     const { title, description } = await response.json();
-    response = await fetch('http://localhost:4000/data-structures');
+    response = await fetch(`${baseUrl}/data-structures`);
     const { dataStructure } = await response.json();
     return {
         title,
