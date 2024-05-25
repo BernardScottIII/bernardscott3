@@ -3,6 +3,7 @@
     const title = data.title;
     const description = data.description;
     const dataStructure = data.dataStructure;
+    console.log("Data incoming:", data)
 </script>
 
 <p><a href="/portfolio">Back</a></p>
