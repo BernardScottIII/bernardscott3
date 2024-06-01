@@ -1,0 +1,52 @@
+body {
+    background-color: #242825;
+}
+
+h1 {
+    color: red;
+}
+
+main p {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+#app-header {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+main {
+    margin: 10em;
+}
+
+#header-home-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+#header-home-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    padding: 0 5em;
+}
+
+.nav-item {
+    text-wrap: nowrap;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand img {
+    height: 3em;
+    border-radius: 50%;
+}
+
+p {
+    color: white;
+}
