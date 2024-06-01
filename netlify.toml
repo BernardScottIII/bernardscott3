@@ -1,3 +1,5 @@
 [[edge_functions]]
     path = "/projects"
     function = "projects"
+
+baseurl = "/"
