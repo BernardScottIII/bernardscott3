@@ -4,6 +4,8 @@
     const description = data.description;
 </script>
 
-<p><a href="/portfolio">Back</a></p>
-<h1>Project details about {title}</h1>
-<p>{description}</p>
+<main>
+    <p><a href="/portfolio">Back</a></p>
+    <h1>Project details about {title}</h1>
+    <p>{description}</p>
+</main>
