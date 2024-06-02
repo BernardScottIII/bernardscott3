@@ -1,33 +1,23 @@
 body {
-    background-color: #242825;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #282424;
+    height: 100vh;
 }
 
 h1 {
-    color: red;
+    font-weight: bolder;
+    color: #118c31;
 }
 
 main p {
-    font-family: 'Courier New', Courier, monospace;
     color: white;
 }
 
-#app-header {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-}
-
 main {
-    margin: 10em;
-}
-
-#header-home-link {
-    color: inherit;
-    text-decoration: none;
-}
-
-#header-home-link:hover {
-    color: inherit;
-    text-decoration: none;
+    margin: 5em 10em;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
 
 .navbar-nav {
@@ -42,6 +32,10 @@ main {
     color: white;
 }
 
+.nav-link:hover {
+    color: #118c31;
+}
+
 .navbar-brand img {
     height: 3em;
     border-radius: 50%;
@@ -49,4 +43,23 @@ main {
 
 p {
     color: white;
+}
+
+#footer {
+    background-color: #201c1c;
+}
+
+h2 {
+    color: #118c31;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section {
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    main {
+        margin: 1em;
+    }
 }
