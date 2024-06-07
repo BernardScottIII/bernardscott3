@@ -14,10 +14,16 @@ main p {
 }
 
 main {
-    margin: 5em 10em;
+    margin: 3em 10em;
     display: flex;
     flex-flow: column;
     height: 100%;
+}
+
+.navbar {
+    background-color: #383434;
+    /* background-image: linear-gradient(#383434 80%, rgba(0, 0, 0, 0)); */
+    /* padding-bottom: 1em; */
 }
 
 .navbar-nav {
@@ -58,8 +64,31 @@ section {
     flex-grow: 1;
 }
 
+.back-button {
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+}
+
 @media only screen and (max-width: 1200px) {
     main {
         margin: 1em;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    /* .back-button {
+        position: relative;
+        bottom: 0;
+        left: 0;
+    } */
+
+    .back-button-container {
+        width: min-content;
+        margin-bottom: 1em;
     }
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl">
+<nav class="navbar sticky-top navbar-expand-xl">
     <a href="/" class="navbar-brand">
         <img src="favicon.png" alt="">
     </a>
