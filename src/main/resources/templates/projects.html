@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+</head>
+<body>
+<h1>Projects</h1>
+  <div th:each="project : ${projects}">
+    <h3 th:text="${project.title}"></h3>
+
+    <p th:text="${project.description}"></p>
+
+    <a th:href="${project.githubUrl}">
+      GitHub
+    </a>
+  </div>
+</body>
+</html>
