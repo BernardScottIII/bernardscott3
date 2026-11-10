@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Bernard Scott</title>
+    <script th:if="${contactConfigured}" src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+<main>
+    <h1>Contact Me</h1>
+    <p>Fill out the form below to contact me via email. I will do my best to respond to all contacts within a week.</p>
+
+    <p th:if="${contactSuccess}" role="status">Thanks for reaching out. Your message was sent.</p>
+    <p th:if="${contactError}" th:text="${contactError}" role="alert"></p>
+    <p th:unless="${contactConfigured}">The contact form is temporarily unavailable while its email and verification settings are configured.</p>
+
+    <form th:action="@{/contact-me}" th:object="${contactForm}" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" th:field="*{name}" maxlength="100" required>
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" role="alert"></p>
+
+        <label for="email">Your email</label>
+        <input id="email" type="email" th:field="*{email}" maxlength="254" required>
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" role="alert"></p>
+
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" th:field="*{subject}" maxlength="150" required>
+        <p th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}" role="alert"></p>
+
+        <label for="message">Message</label>
+        <textarea id="message" th:field="*{message}" maxlength="5000" rows="8" required></textarea>
+        <p th:if="${#fields.hasErrors('message')}" th:errors="*{message}" role="alert"></p>
+
+        <div class="hidden-field" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" type="text" th:field="*{website}" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div th:if="${contactConfigured}" class="cf-turnstile" th:attr="data-sitekey=${turnstileSiteKey}"></div>
+        <button type="submit" th:disabled="${!contactConfigured}">Send message</button>
+    </form>
+</main>
+<style>
+    main { max-width: 38rem; margin: 3rem auto; padding: 0 1rem; font-family: sans-serif; }
+    form { display: grid; gap: .6rem; }
+    input, textarea, button { font: inherit; padding: .65rem; }
+    .hidden-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+</style>
+</body>
+</html>
