@@ -2,6 +2,8 @@ package com.bernardscott.bernardscott3.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Project {
     @Id
@@ -17,6 +19,7 @@ public class Project {
     @Column(nullable = false)
     private String description;
 
+    @Column
     private String githubUrl;
 
     @Column(nullable = false)
@@ -25,9 +28,17 @@ public class Project {
     @Column(nullable = false)
     private int displayOrder;
 
+    @ManyToMany
+    @JoinTable(
+            name = "project_technology",
+            joinColumns = @JoinColumn(name = "project_id"),
+            inverseJoinColumns = @JoinColumn(name = "technology_id")
+    )
+    private List<Technology> technologies;
+
     protected  Project() {}
 
-    public Project(Long id, String title, String slug, String description, String githubUrl, boolean isFeatured, int displayOrder) {
+    public Project(Long id, String title, String slug, String description, String githubUrl, boolean isFeatured, int displayOrder, List<Technology> technologies) {
 
         this.id = id;
         this.title = title;
@@ -36,6 +47,7 @@ public class Project {
         this.githubUrl = githubUrl;
         this.featured = isFeatured;
         this.displayOrder = displayOrder;
+        this.technologies = technologies;
     }
 
     public Long getId() {
@@ -64,5 +76,9 @@ public class Project {
 
     public int getDisplayOrder() {
         return displayOrder;
+    }
+
+    public List<Technology> getTechnologies() {
+        return technologies;
     }
 }

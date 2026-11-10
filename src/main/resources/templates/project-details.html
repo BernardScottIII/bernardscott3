@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${project.title}">Project Details</title>
+</head>
+<body>
+
+<header>
+  <a href="/projects">Back to Projects</a>
+  <h1 th:text="${project.title}">Project Title</h1>
+  <p th:text="${project.description}">Project Description</p>
+</header>
+
+<main>
+  <section>
+    <h2>About This Project</h2>
+    <p>Extended project description will go here.</p>
+  </section>
+
+  <section>
+    <h2>Technology Stack</h2>
+
+    <ul>
+      <li th:each="technology : ${project.technologies}">
+        <img
+                th:src="@{/technology/{filename}(filename=${technology.filename})}"
+                th:alt="${technology.name}"
+                width="48"
+                height="48"
+        >
+        <span th:text="${technology.name}">Technology Name</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Demo</h2>
+    <p>Demo link or embedded demo will go here.</p>
+  </section>
+
+  <section>
+    <h2>Source Code</h2>
+    <a th:href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
+      View on GitHub
+    </a>
+  </section>
+</main>
+
+</body>
+</html>
